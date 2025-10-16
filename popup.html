@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Hourly Logger</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="header">
+    <h2>📝 Hourly Logger</h2>
+    <button id="toggleTheme" class="icon-btn" title="Toggle theme">🌓</button>
+  </div>
+
+  <div class="time-info">
+    <span id="currentTime"></span>
+    <span id="timeSinceLastLog" class="time-since"></span>
+  </div>
+
+  <div class="category-section">
+    <label for="categorySelect">Category:</label>
+    <select id="categorySelect">
+      <option value="BugFixes">🪲 Bug Fixes</option>
+      <option value="Meeting">👥 Call and Meetings</option>
+      <option value="Learning">📚  Deployment</option>
+      <option value="Break">📔 Design</option>
+      <option value="Personal">🏠 Development</option>
+      <option value="Personal">📑 Documentation</option>
+      <option value="Personal">📞 Internal Support</option>
+      <option value="Personal">🛜 Network Support</option>
+      <option value="Personal">🏵️ Project Planning</option>
+      <option value="Personal">👾 QA</option>
+      <option value="Personal">🔍 Requirement Gathering</option>
+      <option value="Personal">🔎 Research</option>
+      <option value="Personal">✅ Review</option>
+      <option value="Personal">🏫 Technical Architecture</option>
+      <option value="Personal">📃 Test Case Writing</option>
+      <option value="Other">🧑‍🎓 Training</option>
+    </select>
+    <button id="manageCategories" class="small-btn">Manage</button>
+  </div>
+
+  <div class="template-section">
+    <label>Quick Templates:</label>
+    <div id="templateButtons" class="template-btns"></div>
+  </div>
+
+  <textarea id="logInput" placeholder="What did you work on? (Press Enter to save, Esc to close)"></textarea>
+  
+  <div class="buttons">
+    <button id="saveLog" class="primary-btn">💾 Save Log</button>
+    <button id="viewSummary">📊 View Summary</button>
+  </div>
+
+  <div id="statusToast" class="toast"></div>
+
+  <div class="recent-logs">
+    <h3>Recent Logs</h3>
+    <div id="recentLogsList"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

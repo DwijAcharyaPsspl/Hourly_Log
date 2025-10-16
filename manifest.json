@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "HourlyLogger",
+  "description": "Smart hourly work logger with analytics, categories, and productivity insights.",
+  "version": "2.0",
+  "permissions": ["storage", "notifications", "alarms"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "open-logger": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L",
+        "mac": "Command+Shift+L"
+      },
+      "description": "Open logger popup"
+    }
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}

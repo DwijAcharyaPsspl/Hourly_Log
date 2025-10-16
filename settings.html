@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Settings - Hourly Logger</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="settings-container">
+    <h2>⚙️ Settings</h2>
+
+    <div class="settings-section">
+      <h3>Notification Settings</h3>
+      
+      <div class="setting-item">
+        <label for="reminderInterval">Reminder Interval</label>
+        <select id="reminderInterval">
+          <option value="15">Every 15 minutes</option>
+          <option value="30">Every 30 minutes</option>
+          <option value="60">Every hour</option>
+          <option value="90">Every 90 minutes</option>
+          <option value="120">Every 2 hours</option>
+        </select>
+      </div>
+
+      <div class="setting-item">
+        <label>
+          <input type="checkbox" id="quietHoursEnabled" />
+          Enable Quiet Hours
+        </label>
+      </div>
+
+      <div class="setting-item quiet-hours" id="quietHoursSettings">
+        <label for="quietHoursStart">Start Time</label>
+        <input type="time" id="quietHoursStart" value="22:00" />
+        
+        <label for="quietHoursEnd">End Time</label>
+        <input type="time" id="quietHoursEnd" value="08:00" />
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <h3>Categories</h3>
+      <div id="categoriesList"></div>
+      <div class="add-category">
+        <input type="text" id="newCategoryName" placeholder="Category name" />
+        <input type="text" id="newCategoryEmoji" placeholder="Emoji" maxlength="2" />
+        <button id="addCategory">Add Category</button>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <h3>Quick Templates</h3>
+      <div id="templatesList"></div>
+      <div class="add-template">
+        <input type="text" id="newTemplateName" placeholder="Template name" />
+        <input type="text" id="newTemplateText" placeholder="Template text" />
+        <button id="addTemplate">Add Template</button>
+      </div>
+    </div>
+
+    <div class="settings-actions">
+      <button id="saveSettings" class="primary-btn">💾 Save Settings</button>
+      <button id="resetSettings" class="danger-btn">Reset to Defaults</button>
+    </div>
+
+    <div id="statusToast" class="toast"></div>
+  </div>
+
+  <script src="settings.js"></script>
+</body>
+</html>
