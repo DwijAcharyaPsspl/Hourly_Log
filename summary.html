@@ -6,76 +6,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="summary-header">
-    <h2>📊 Logs Summary & Analytics</h2>
-    <div class="header-actions">
-      <button id="toggleTheme" class="icon-btn" title="Toggle theme">🌓</button>
-      <button id="settingsBtn" class="icon-btn" title="Settings">⚙️</button>
-    </div>
-  </div>
-
-  <div class="stats-grid">
-    <div class="stat-card">
-      <div class="stat-value" id="totalLogs">0</div>
-      <div class="stat-label">Total Logs</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value" id="todayLogs">0</div>
-      <div class="stat-label">Today's Logs</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value" id="weekLogs">0</div>
-      <div class="stat-label">This Week</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value" id="avgPerDay">0</div>
-      <div class="stat-label">Avg/Day</div>
-    </div>
-  </div>
-
-  <div class="category-breakdown">
-    <h3>Category Breakdown</h3>
-    <div id="categoryChart"></div>
-  </div>
-
-  <div class="controls">
-    <div class="search-filter">
-      <input type="text" id="searchInput" placeholder="🔍 Search logs..." />
-      <select id="categoryFilter">
-        <option value="">All Categories</option>
-      </select>
-      <select id="dateFilter">
-        <option value="all">All Time</option>
-        <option value="today">Today</option>
-        <option value="week">This Week</option>
-        <option value="month">This Month</option>
-      </select>
-    </div>
-    
-    <div class="action-buttons">
-      <button id="exportLogs">📥 Export</button>
-      <button id="backupLogs">💾 Backup</button>
-      <button id="restoreLogs">📤 Restore</button>
-      <button id="clearAll" class="danger-btn">🗑️ Clear All</button>
-    </div>
-  </div>
-
+  <h2>Logs Summary</h2>
+  <button id="exportLogs">Export Logs</button>
+  <button id="clearAll">Clear All</button>
   <div id="logList"></div>
-
-  <div id="editModal" class="modal">
-    <div class="modal-content">
-      <h3>Edit Log</h3>
-      <select id="editCategory"></select>
-      <textarea id="editText"></textarea>
-      <div class="modal-buttons">
-        <button id="saveEdit" class="primary-btn">Save</button>
-        <button id="cancelEdit">Cancel</button>
-      </div>
-    </div>
-  </div>
-
-  <div id="statusToast" class="toast"></div>
-  <input type="file" id="restoreInput" accept=".json" style="display: none;" />
 
   <script src="summary.js"></script>
 </body>
